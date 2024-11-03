@@ -4,20 +4,47 @@
  */
 package gui;
 
+import java.awt.BorderLayout;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.CategoryPlot;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.category.DefaultCategoryDataset;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author Acer
- */
+
+
 public class tema1 extends javax.swing.JPanel {
 
-    /**
-     * Creates new form tema1
-     */
+        
+    //Metodo Main temporal para hacer pruebas 
+    public static void main(String[] args) {
+        
+        JFrame frame = new JFrame("Prueba de Frame");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(925, 730);
+        tema1 panel = new tema1(); //cambiar "tema1" por nombre del panel 
+        
+        frame.add(panel);
+        
+        frame.setVisible(true); 
+        
+         
+    }
+    
+    
     public tema1() {
         initComponents();
     }
@@ -33,40 +60,191 @@ public class tema1 extends javax.swing.JPanel {
 
         bg = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnGenerarTabla = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        txtValoresTabla = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tbFrecuencias = new javax.swing.JTable();
+        panelGrafica = new javax.swing.JPanel();
 
         setPreferredSize(new java.awt.Dimension(925, 730));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("jLabel1");
+        bg.setBackground(new java.awt.Color(255, 255, 255));
+        bg.setPreferredSize(new java.awt.Dimension(925, 730));
 
-        jButton1.setText("jButton1");
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel1.setText("Tema 1");
+
+        btnGenerarTabla.setText("Generar Tabla y Grafica");
+        btnGenerarTabla.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGenerarTablaActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel2.setText("Ingresar valores a evaluar:");
+
+        txtValoresTabla.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
+        jLabel3.setText("Separados por comas");
+
+        tbFrecuencias.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tbFrecuencias.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane1.setViewportView(tbFrecuencias);
+
+        panelGrafica.setPreferredSize(new java.awt.Dimension(400, 300));
+
+        javax.swing.GroupLayout panelGraficaLayout = new javax.swing.GroupLayout(panelGrafica);
+        panelGrafica.setLayout(panelGraficaLayout);
+        panelGraficaLayout.setHorizontalGroup(
+            panelGraficaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        panelGraficaLayout.setVerticalGroup(
+            panelGraficaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout bgLayout = new javax.swing.GroupLayout(bg);
         bg.setLayout(bgLayout);
         bgLayout.setHorizontalGroup(
             bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(bgLayout.createSequentialGroup()
-                .addGap(375, 375, 375)
-                .addComponent(jLabel1)
-                .addContainerGap(513, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bgLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(264, 264, 264))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(362, 362, 362))
+            .addGroup(bgLayout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnGenerarTabla, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(txtValoresTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(241, Short.MAX_VALUE))
+            .addGroup(bgLayout.createSequentialGroup()
+                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, bgLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, bgLayout.createSequentialGroup()
+                        .addGap(378, 378, 378)
+                        .addComponent(jLabel1))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, bgLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(panelGrafica, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         bgLayout.setVerticalGroup(
             bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(bgLayout.createSequentialGroup()
-                .addGap(110, 110, 110)
+                .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(112, 112, 112)
-                .addComponent(jButton1)
-                .addContainerGap(469, Short.MAX_VALUE))
+                .addGap(24, 24, 24)
+                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtValoresTabla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3)
+                .addGap(18, 18, 18)
+                .addComponent(btnGenerarTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panelGrafica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnGenerarTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarTablaActionPerformed
+        try {
+            // Obtener y procesar los valores ingresados
+            String[] partes = txtValoresTabla.getText().split(",");
+            List<Integer> valores = new ArrayList<>();
+            for (String parte : partes) {
+                valores.add(Integer.parseInt(parte.trim()));
+            }
+
+            // Ordenar los valores
+            Collections.sort(valores);
+
+            // Calcular frecuencias
+            Map<Integer, Integer> frecuenciaMap = new LinkedHashMap<>();
+            for (int valor : valores) {
+                frecuenciaMap.put(valor, frecuenciaMap.getOrDefault(valor, 0) + 1);
+            }
+
+            // Calcular frecuencia relativa y frecuencia relativa acumulada
+            int totalValores = valores.size();
+            double frecuenciaRelativaAcumulada = 0.0;
+            
+           // Crear el modelo de tabla con las columnas necesarias
+        DefaultTableModel model = new DefaultTableModel(new Object[]{"Valor", "Frecuencia", "Frecuencia Relativa", "Frec. Rel. Acumulada"}, 0);
+            
+            for (Map.Entry<Integer, Integer> entry : frecuenciaMap.entrySet()) {
+                int valor = entry.getKey();
+                int frecuencia = entry.getValue();
+                double frecuenciaRelativa = (double) frecuencia / totalValores;
+                frecuenciaRelativaAcumulada += frecuenciaRelativa;
+
+                // Agregar fila a la tabla
+                model.addRow(new Object[]{valor, frecuencia, String.format("%.4f", frecuenciaRelativa), String.format("%.4f", frecuenciaRelativaAcumulada)});
+            }
+
+            // Asignar el modelo a la tabla
+            tbFrecuencias.setModel(model);
+
+        } catch (NumberFormatException ex) {
+            JOptionPane.showMessageDialog(this, "Por favor ingrese números válidos separados por comas.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        
+        // Codigo Encargado de la tabla 
+        
+        DefaultCategoryDataset dataset = new DefaultCategoryDataset();
+        
+        // Recorrer la tabla para obtener los valores
+    for (int i = 0; i < tbFrecuencias.getRowCount(); i++) {
+        int valor = Integer.parseInt(tbFrecuencias.getValueAt(i, 0).toString());       // Primera columna: valor
+        int frecuencia = Integer.parseInt(tbFrecuencias.getValueAt(i, 1).toString());  // Segunda columna: frecuencia
+
+        // Agregar los valores al dataset para la gráfica
+        dataset.addValue(frecuencia, "Frecuencia", String.valueOf(valor));
+    }
+        // Crear el gráfico
+        JFreeChart chart = ChartFactory.createBarChart(
+                "Frecuencia de Valores", // Título
+                "Valores",               // Etiqueta de la categoría
+                "Frecuencia",            // Etiqueta del valor
+                dataset
+        );
+
+         // Convertir el gráfico en un ChartPanel
+    ChartPanel chartPanel = new ChartPanel(chart);
+    chartPanel.setPreferredSize(new java.awt.Dimension(400, 300));
+
+    // Configurar el layout del panel y agregar el ChartPanel
+         panelGrafica.setLayout(new BorderLayout()); // Asegura que el gráfico ocupe el espacio completo
+         panelGrafica.removeAll();
+         panelGrafica.add(chartPanel, BorderLayout.CENTER);
+         panelGrafica.revalidate();
+        panelGrafica.repaint();
+     
+    }//GEN-LAST:event_btnGenerarTablaActionPerformed
 
     class Background extends JPanel{
         private Image imagen;
@@ -81,7 +259,13 @@ public class tema1 extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bg;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnGenerarTabla;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel panelGrafica;
+    private javax.swing.JTable tbFrecuencias;
+    private javax.swing.JTextField txtValoresTabla;
     // End of variables declaration//GEN-END:variables
 }
