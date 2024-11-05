@@ -314,8 +314,6 @@ private DefaultTableModel tableModel;
     } catch (NumberFormatException ex) {
         // Mostrar un mensaje de error si la conversión falla
         JOptionPane.showMessageDialog(this, "Por favor, ingresa valores numéricos válidos.", "Error", JOptionPane.ERROR_MESSAGE);
-        txtLimiteInferior.setText("");
-        txtLimiteSuperior.setText("");
         txtFrecuencia.setText("");
      }
         
