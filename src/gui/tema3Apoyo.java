@@ -5,6 +5,7 @@
 package gui;
 
 import java.awt.Frame;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -15,6 +16,35 @@ public class tema3Apoyo extends javax.swing.JDialog {
     private double LimiteInferior;
     private double LimiteSuperior;
     private int FrecuenciaInicial;
+
+    public double getLimiteInferior() {
+        return LimiteInferior;
+    }
+
+    public void setLimiteInferior(double LimiteInferior) {
+        this.LimiteInferior = LimiteInferior;
+    }
+
+    public double getLimiteSuperior() {
+        return LimiteSuperior;
+    }
+
+    public void setLimiteSuperior(double LimiteSuperior) {
+        this.LimiteSuperior = LimiteSuperior;
+    }
+
+    public int getFrecuenciaInicial() {
+        return FrecuenciaInicial;
+    }
+
+    public void setFrecuenciaInicial(int FrecuenciaInicial) {
+        this.FrecuenciaInicial = FrecuenciaInicial;
+    }
+    
+    
+    private tema3Apoyo(JFrame jFrame, LimitesListener limitesListener) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
     public interface LimitesListener {
      void onLimitesEntered(double limiteInferior, double limiteSuperior, int frecuenciaInicial);
@@ -189,16 +219,22 @@ public class tema3Apoyo extends javax.swing.JDialog {
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                tema3Apoyo dialog = new tema3Apoyo(new javax.swing.JFrame());
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
-            }
-        });
+                tema3Apoyo dialog = new tema3Apoyo(new javax.swing.JFrame(), new LimitesListener() {
+                @Override
+                public void onLimitesEntered(double limiteInferior, double limiteSuperior, int frecuenciaInicial) {
+                    // Implementa esta interfaz aquí si necesitas realizar alguna acción para las pruebas
+                    System.out.println("Límites ingresados para pruebas: " + limiteInferior + ", " + limiteSuperior + ", " + frecuenciaInicial);
+                }
+            });
+            dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+                @Override
+                public void windowClosing(java.awt.event.WindowEvent e) {
+                    System.exit(0);
+                }
+            });
+            dialog.setVisible(true);
+        }
+    });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
