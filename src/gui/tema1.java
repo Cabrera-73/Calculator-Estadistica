@@ -74,11 +74,21 @@ public class tema1 extends javax.swing.JPanel {
         bg.setBackground(new java.awt.Color(255, 255, 255));
         bg.setPreferredSize(new java.awt.Dimension(925, 730));
 
+<<<<<<< HEAD
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setText("Tema 1");
 
         btnGenerarTabla.setText("Generar Tabla y Grafica");
         btnGenerarTabla.addActionListener(new java.awt.event.ActionListener() {
+=======
+        btnGenerate.setBackground(new java.awt.Color(7, 87, 91));
+        btnGenerate.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        btnGenerate.setForeground(new java.awt.Color(255, 255, 255));
+        btnGenerate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/IconGrafica.png"))); // NOI18N
+        btnGenerate.setText("Generar Tabla y Grafica");
+        btnGenerate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnGenerate.addActionListener(new java.awt.event.ActionListener() {
+>>>>>>> a7e80c1 (Diseño de pestañas e implementación en el Dashboard)
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGenerarTablaActionPerformed(evt);
             }
@@ -123,6 +133,7 @@ public class tema1 extends javax.swing.JPanel {
         bg.setLayout(bgLayout);
         bgLayout.setHorizontalGroup(
             bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bgLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -147,6 +158,43 @@ public class tema1 extends javax.swing.JPanel {
                         .addContainerGap()
                         .addComponent(panelGrafica, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)))
                 .addGap(0, 0, Short.MAX_VALUE))
+=======
+            .addGroup(bgLayout.createSequentialGroup()
+                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(bgLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtValoresTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(bgLayout.createSequentialGroup()
+                        .addGap(334, 334, 334)
+                        .addComponent(jLabel5)))
+                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(bgLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel3)
+                        .addGap(62, 62, 62))
+                    .addGroup(bgLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(btnGenerate)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(bgLayout.createSequentialGroup()
+                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1)
+                    .addGroup(bgLayout.createSequentialGroup()
+                        .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(bgLayout.createSequentialGroup()
+                                .addGap(66, 66, 66)
+                                .addComponent(panelGrafica, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(bgLayout.createSequentialGroup()
+                                .addGap(392, 392, 392)
+                                .addComponent(jLabel1))
+                            .addGroup(bgLayout.createSequentialGroup()
+                                .addGap(143, 143, 143)
+                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+>>>>>>> a7e80c1 (Diseño de pestañas e implementación en el Dashboard)
         );
         bgLayout.setVerticalGroup(
             bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

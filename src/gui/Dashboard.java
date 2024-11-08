@@ -279,6 +279,67 @@ public class Dashboard extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+<<<<<<< HEAD
+=======
+    //Inicialización de objetos para el uso del clicked
+    Home home = new Home();
+    tema1 tema1 = new tema1();
+    tema2 tema2 = new tema2();
+    tema3 tema3 = new tema3();
+    tema4 tema4 = new tema4();
+    tema6 tema6 = new tema6();
+    tema7 tema7 = new tema7();
+    tema9 tema9 = new tema9();
+    
+    private void btnTema1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTema1MouseClicked
+        ShowPannel(tema1);    
+    }//GEN-LAST:event_btnTema1MouseClicked
+
+    private void btnTema2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTema2MouseClicked
+       ShowPannel(tema2);
+    }//GEN-LAST:event_btnTema2MouseClicked
+
+    private void btnTema3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTema3MouseClicked
+        ShowPannel(tema3);
+    }//GEN-LAST:event_btnTema3MouseClicked
+
+    private void btnTema4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTema4MouseClicked
+        ShowPannel(tema4);
+    }//GEN-LAST:event_btnTema4MouseClicked
+
+    private void btnTema5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTema5MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnTema5MouseClicked
+
+    private void btnTema6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTema6MouseClicked
+        ShowPannel(tema6);
+    }//GEN-LAST:event_btnTema6MouseClicked
+
+    private void btnTema7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTema7MouseClicked
+        ShowPannel(tema7);
+    }//GEN-LAST:event_btnTema7MouseClicked
+
+    private void btnTema8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTema8MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnTema8MouseClicked
+
+    private void btnTema9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTema9MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnTema9MouseClicked
+
+    private void btnTema10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTema10MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnTema10MouseClicked
+
+    private void btnTema11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTema11MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnTema11MouseClicked
+
+    private void btnHomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHomeMouseClicked
+        // TODO add your handling code here:
+        ShowPannel(home);
+    }//GEN-LAST:event_btnHomeMouseClicked
+>>>>>>> a7e80c1 (Diseño de pestañas e implementación en el Dashboard)
     //barra personalizada
     int x;
     int y;

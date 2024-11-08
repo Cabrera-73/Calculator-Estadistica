@@ -46,12 +46,15 @@ public class tema6 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+<<<<<<< HEAD
         bg = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+=======
+        bg = new Background();
+>>>>>>> a7e80c1 (Diseño de pestañas e implementación en el Dashboard)
         txtResulPermutacion = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         txtValorN = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
         btnTeorema4 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         txtValoresN = new javax.swing.JTextField();
@@ -59,25 +62,23 @@ public class tema6 extends javax.swing.JPanel {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         txtResulTeorema4 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
         txtResulCombinacion = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
         btnCombinacion = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         txtValorR = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(925, 730));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         bg.setBackground(new java.awt.Color(255, 255, 255));
+        bg.setToolTipText("[255,255,255");
         bg.setPreferredSize(new java.awt.Dimension(925, 730));
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setText("Tema 6");
-        bg.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, 90, -1));
 
         txtResulPermutacion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txtResulPermutacion.addActionListener(new java.awt.event.ActionListener() {
@@ -85,51 +86,57 @@ public class tema6 extends javax.swing.JPanel {
                 txtResulPermutacionActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
         bg.add(txtResulPermutacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 200, 220, 30));
+=======
+        bg.add(txtResulPermutacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 360, 190, 50));
+>>>>>>> a7e80c1 (Diseño de pestañas e implementación en el Dashboard)
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
         jLabel3.setText("Separados por comas ");
-        bg.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 100, 120, 30));
+        bg.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 230, 120, 30));
 
         txtValorN.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        bg.add(txtValorN, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 90, 30));
+        bg.add(txtValorN, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 90, 30));
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel4.setText("Resultado:");
-        bg.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 90, 30));
-
+        btnTeorema4.setBackground(new java.awt.Color(7, 87, 91));
         btnTeorema4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnTeorema4.setForeground(new java.awt.Color(255, 255, 255));
+        btnTeorema4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/IconCalculator.png"))); // NOI18N
         btnTeorema4.setText("Calcular");
         btnTeorema4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTeorema4ActionPerformed(evt);
             }
         });
-        bg.add(btnTeorema4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 150, 50));
+        bg.add(btnTeorema4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 610, 150, 50));
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel5.setText("Permutacion de N objetos");
-        bg.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 220, 30));
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel5.setText("Permutacion de N objetos:");
+        bg.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 510, 320, 30));
 
         txtValoresN.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        bg.add(txtValoresN, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 80, 150, 30));
+        bg.add(txtValoresN, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 210, 150, 30));
 
+        btnPermutacion.setBackground(new java.awt.Color(7, 87, 91));
         btnPermutacion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnPermutacion.setForeground(new java.awt.Color(255, 255, 255));
+        btnPermutacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/IconCalculator.png"))); // NOI18N
         btnPermutacion.setText("Calcular");
         btnPermutacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPermutacionActionPerformed(evt);
             }
         });
-        bg.add(btnPermutacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 150, 50));
+        bg.add(btnPermutacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 430, 150, 50));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel6.setText("Valor \"r\":");
-        bg.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 80, 90, 30));
+        bg.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, 90, 30));
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel7.setText("Permutacion");
-        bg.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 150, 30));
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel7.setText("Permutacion:");
+        bg.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, 160, 30));
 
         txtResulTeorema4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txtResulTeorema4.addActionListener(new java.awt.event.ActionListener() {
@@ -137,6 +144,7 @@ public class tema6 extends javax.swing.JPanel {
                 txtResulTeorema4ActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
         bg.add(txtResulTeorema4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 330, 220, 30));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -149,30 +157,51 @@ public class tema6 extends javax.swing.JPanel {
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel9.setText("Resultado:");
         bg.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, 90, 30));
+=======
+        bg.add(txtResulTeorema4, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 550, 190, 50));
 
+        txtResulCombinacion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        bg.add(txtResulCombinacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 360, 160, 50));
+>>>>>>> a7e80c1 (Diseño de pestañas e implementación en el Dashboard)
+
+        btnCombinacion.setBackground(new java.awt.Color(7, 87, 91));
         btnCombinacion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnCombinacion.setForeground(new java.awt.Color(255, 255, 255));
+        btnCombinacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/IconCalculator.png"))); // NOI18N
         btnCombinacion.setText("Calcular");
         btnCombinacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCombinacionActionPerformed(evt);
             }
         });
-        bg.add(btnCombinacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 150, 50));
+        bg.add(btnCombinacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 430, 130, 50));
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel10.setText("Combinacion");
-        bg.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, 150, 30));
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel10.setText("Combinación:");
+        bg.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 310, 160, 30));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel11.setText("Valor \"n\":");
-        bg.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 90, 30));
+        jLabel11.setText("Valor de \"n\":");
+        bg.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 110, 30));
 
         txtValorR.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        bg.add(txtValorR, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 80, 90, 30));
+        bg.add(txtValorR, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, 90, 30));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel12.setText("Valores para N objetos:");
-        bg.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 80, 190, 30));
+        bg.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, 190, 30));
+
+        jLabel13.setFont(new java.awt.Font("SimSun", 0, 48)); // NOI18N
+        jLabel13.setText("TEMA 6");
+        bg.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel2.setText("<html>Determinar cantidad de intervalos, Amplitud de los intervalos</html> ");
+        bg.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, -1, -1));
+
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel14.setText("Calculadora de Problemas");
+        bg.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, -1, -1));
 
         add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
@@ -254,17 +283,16 @@ public class tema6 extends javax.swing.JPanel {
     private javax.swing.JButton btnCombinacion;
     private javax.swing.JButton btnPermutacion;
     private javax.swing.JButton btnTeorema4;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField txtResulCombinacion;
     private javax.swing.JTextField txtResulPermutacion;
     private javax.swing.JTextField txtResulTeorema4;
